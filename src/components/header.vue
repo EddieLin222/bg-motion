@@ -3,6 +3,7 @@
     <div class="brand">
       <QRouterLink class="img-box" to="/" @click="openMenu = false">
         <img src="/image/logo.svg" alt="">
+        <div class="motion">MOTION</div>
       </QRouterLink>
     </div>
     <div class="toggle-btn" @click="openMenu = !openMenu" :class="{show: openMenu}">
@@ -29,9 +30,8 @@
         <div class="mail">misseco.tw@gmail.com</div>
       </div>
     </div>
+    <div class="social"></div>
   </div>
-  <div class="header-space"></div>
-
 </template>
 
 <script setup lang="ts">
@@ -97,12 +97,18 @@ const social = [
   box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.3)
   top: 0
   .brand
-    width: 50px
     display: flex
+    flex: 1
     .img-box
       padding: 5px 0px
+      display: flex
+      align-items: center
+      gap: 10px
       img
-        width: 100%
+        width: 50px
+      .motion
+        font-weight: 900
+        color: #415B48
   .toggle-btn
     height: 34px
     width: 28px
@@ -149,6 +155,7 @@ const social = [
         margin: 0px 5px 
         padding: 3px 18px
         font-size: 15px
+        cursor: pointer
     .s-block
       // display: flex
       flex-direction: column
@@ -167,6 +174,8 @@ const social = [
           width: 30px
           height: 30px
           margin: 0px 10px
+  .social
+    flex: 1
 @media (max-width: 992px)
   .header
     flex-wrap: wrap

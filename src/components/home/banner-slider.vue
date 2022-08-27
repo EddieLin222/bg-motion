@@ -2,12 +2,14 @@
   <div class="banner">
     <div class="slider-block">
         <swiper
-            :modules="[Navigation, Pagination]"
+            :modules="[Navigation, Pagination, EffectFade]"
             :pagination="{clickable: true}"
             :navigation="{ nextEl: '.next-btn', prevEl: '.prev-btn' }"
             :slides-per-view="1"
             :space-between="30"
             :scrollbar="{ draggable: true }"
+            :effect="'fade'"
+            :fadeEffect="{crossFade:true}"
         >
             <swiper-slide
                 v-for="(list, index) in dataList"
@@ -20,7 +22,7 @@
                     <div class="content">
                         {{list.content}}
                     </div>
-                    <div class="btn">Button</div>
+                    <div class="btn">BUTTON</div>
                 </div>
                 <div class="right">
                     <img src="/image/home/banner/banner1.svg" alt="">
@@ -28,7 +30,7 @@
             </swiper-slide>
         </swiper>
     </div>
-     <div class="navigation-block">
+    <div class="navigation-block">
         <div class="inner">
             <div class="prev-btn">
                 <q-icon name="chevron_left" />
@@ -42,9 +44,10 @@
 </template>
 
 <script setup lang="ts">
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
+import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
@@ -80,29 +83,31 @@ const dataList = ref([
 
 <style scoped lang="sass">
 .banner
-    height: calc(100vh - 50px)
-    background-color: #F4F4F4
+    height: calc(90vh - 50px)
+    background-color: #f4f4f4
     position: relative
     .slider-block
         display: flex
         align-items: center
-        height: 100%
+        height: calc(100% - 80px)
         .swiper
             --swiper-navigation-size: 30px
+            .swiper-slide-active
+                opacity: 1 !important
             .swiper-slide
                 display: flex
                 justify-content: center
                 align-items: center
-                padding: 0px 120px
-                gap: 50px
+                padding: 0px 10%
+                gap: 60px
                 .left
                     flex: 1
                     .title
                         font-size: 32px
-                        font-weight: 900
+                        font-weight: 700
                     .content
                         font-size: 18px
-                        font-weight: 900
+                        font-weight: 700
                         margin: 30px 0px
                         letter-spacing: 1px
                     .btn
@@ -115,6 +120,8 @@ const dataList = ref([
                         border-radius: 5px
                 .right
                     flex: 1
+                    img
+                        max-height: 50vh
             :deep() .swiper-pagination
                 left: auto
                 right: 0
@@ -132,11 +139,10 @@ const dataList = ref([
             :deep() .swiper-pagination-bullet-active
                 box-shadow: 0px 0px 0px 5px rgba(65, 91, 72, .5)
     .navigation-block
-        padding: 0px 120px
-        position: absolute
-        bottom: 70px
-        left: 0
-        z-index: 9998
+        display: flex
+        justify-content: flex-start
+        padding: 0px 10%
+        height: 80px
         .inner
             display: inline-flex
             align-items: center
