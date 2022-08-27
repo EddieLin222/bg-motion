@@ -1,24 +1,17 @@
 <template>
   <Header></Header>
-  <!-- <div class="flex">
-    <q-btn
-      icon="home"
-      class="w-40"
-    >
-      安安 {{ store.data }}
-    </q-btn>
-  </div> -->
   <router-view />
 </template>
 
 <script setup lang="ts">
+import Header from './components/header.vue'
 import { ref } from 'vue';
 import { useMainStore } from './stores/main.store';
-import Header from './components/header.vue'
 
-const store = useMainStore();
 
-document.title += ` v${import.meta.env.PACKAGE_VERSION}`
+// const store = useMainStore();
+
+// document.title += ` v${import.meta.env.PACKAGE_VERSION}`
 </script>
 
 <style lang="sass">

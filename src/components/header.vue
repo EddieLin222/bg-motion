@@ -50,6 +50,10 @@ const navItems = [
   {
     name: '關於我們',
     link: '/about'
+  },
+  {
+    name: '報價咨詢',
+    link: '/price'
   }
 ]
 const social = [
@@ -189,5 +193,4 @@ const social = [
       height: 0
     .social
       display: none
-    
 </style>
