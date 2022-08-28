@@ -1,10 +1,12 @@
 <template>
   <Header></Header>
   <router-view />
+  <Footer></Footer>
 </template>
 
 <script setup lang="ts">
 import Header from './components/header.vue'
+import Footer from './components/footer.vue'
 import { ref } from 'vue';
 import { useMainStore } from './stores/main.store';
 

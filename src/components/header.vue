@@ -181,6 +181,16 @@ const social = [
       overflow: hidden
       .item
         background-color: #7C9483
+    .nav-menu:nth-child(3)
+      width: 25%
+      overflow: hidden
+      .item
+        background-color: #D7471A
+    .nav-menu:nth-child(4)
+      width: 25%
+      overflow: hidden
+      .item
+        background-color: #225e39
     .nav-menu
       width: 25%
       display: flex
