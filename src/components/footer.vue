@@ -48,9 +48,10 @@ const emit = defineEmits<{
     background-color: #252926
     padding: 40px 100px 40px 170px
     color: #fff
-    font-weight: 700
+    font-weight: 500
     gap: 30px
     .top
+        font-weight: 900
         width: 100%
         .logo
             display: flex

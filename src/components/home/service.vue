@@ -82,7 +82,7 @@ const props = withDefaults(defineProps<Props>(), {
     display: flex
     flex-direction: column
     align-items: flex-start
-    justify-content: center
+    justify-content: flex-start
     padding: 60px 100px 60px 170px
     // padding: 50px 12%
     background-color: #F3FFF7
@@ -90,7 +90,7 @@ const props = withDefaults(defineProps<Props>(), {
     .title
         font-size: 28px
         font-weight: 700
-        margin-bottom: 30px
+        margin-bottom: 60px
     .container
         display: flex
         align-items: flex-start
@@ -109,7 +109,7 @@ const props = withDefaults(defineProps<Props>(), {
                 margin-top: 20px
                 display: flex
                 border-bottom: solid 2px #415B48
-                gap: 10px
+                gap: 8px
                 flex-wrap: wrap
                 margin-bottom: 20px
                 .tag

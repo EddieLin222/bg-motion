@@ -95,9 +95,12 @@ const dataList = ref([
     height: 100vh
     background-color: #f4f4f4
     position: relative
+    overflow: hidden
     video
         position: absolute
         object-fit: cover
+        min-height: 100%
+        min-width: 100%
     .slider-block
         display: flex
         align-items: center

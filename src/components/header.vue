@@ -111,17 +111,17 @@ const social = [
     flex: 1
     // border: solid 3px red
     .img-box
-      padding: 5px 0px
+      padding: 10px 0px
       display: flex
       flex-direction: column
       align-items: center
       gap: 2px
-      width: 70px
-      padding: 15px 5px
+      width: 60px
+      padding: 20px 5px
       img
-        width: 70px
+        width: 60px
       .motion
-        font-size: 14px
+        font-size: 12px
         font-weight: 900
         color: #fff
   .toggle-btn
