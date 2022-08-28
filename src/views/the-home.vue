@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <div class="header-space"></div>
     <Banner></Banner>
     <Service :serviceData="serviceData"></Service>
   </div>
@@ -48,7 +47,7 @@ const serviceData = {
                 <br>網站版面完美呈現，打造動態效果
                 <br>客製化功能製作，滿足您的所有需求`,
       img: '/image/home/service/service2.svg',
-      price: '價位:60000元以上',
+      price: '價位 : 60000元以上',
       tag: 2
     },
     {
@@ -61,7 +60,7 @@ const serviceData = {
                 <br>串接相關系統API，彙整您需要的功能與資料
                 <br>解決您的痛點，完美您的流程`,
       img: '/image/home/service/service3.svg',
-      price: '價位：依功能報價',
+      price: '價位 : 依功能報價',
       tag: 3
     }
   ]

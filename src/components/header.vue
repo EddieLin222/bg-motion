@@ -86,65 +86,85 @@ const social = [
 
 <style scoped lang="sass">
 .header
-  background-color: #fff
+  // background-color: #fff
+  background-color: #283A2D
   display: flex
+  flex-direction: column
   align-items: center
   justify-content: space-between
   position: fixed
   width: 100%
   z-index: 9999
-  padding: 5px 10px
-  box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.3)
+  width: 90px
+  height: 100vh
+  // box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.3)
   top: 0
   .brand
     display: flex
     flex: 1
+    // border: solid 3px red
     .img-box
       padding: 5px 0px
       display: flex
+      flex-direction: column
       align-items: center
-      gap: 10px
+      gap: 2px
+      width: 70px
+      padding: 15px 5px
       img
-        width: 50px
+        width: 70px
       .motion
+        font-size: 12px
         font-weight: 900
-        color: #415B48
+        color: #fff
   .toggle-btn
-    height: 34px
-    width: 28px
-    border-radius: 3px
+    height: 50px
+    width: 50px
+    border-radius: 8px
     justify-content: space-between
     align-items: center
     flex-direction: column
-    padding: 7px 6px
-    display: none
     position: relative
+    border: solid 3px #fff
     .line
-      border-top: solid 3px #78A780
-      width: 100%
+      border-top: solid 3px #fff
+      width: 70%
       position: absolute
+      left: 15%
       transform-origin: center
-      transition-duration: .5s
+      transition-duration: 0.5s
       opacity: 1
   .toggle-btn.show
     .top-line
-      top: 15px
+      top: 20px
       transform: rotate(45deg)
     .center-line
+      top: 25px
       opacity: 0
     .bottom-line
-      top: 15px
+      top: 20px
       transform: rotate(-45deg)
   .toggle-btn:not(.show)
     .top-line
-      top: 6px
+      top: 11px
     .center-line
-      top: 15px
+      top: 20px
     .bottom-line
-      top: 24px
+      top: 29px
+
+  .nav.show
+    width: calc(100vw - 90px)
   .nav
     display: flex
+    height: 100vh
     flex-direction: column
+    width: 0
+    position: absolute
+    background-color: #000
+    left: 90px
+    top: 0
+    overflow: hidden
+    transition-duration: .5s
     .nav-menu
       display: flex
       color: #000
@@ -156,6 +176,7 @@ const social = [
         padding: 3px 18px
         font-size: 15px
         cursor: pointer
+        color: #fff
     .s-block
       // display: flex
       flex-direction: column
@@ -176,30 +197,30 @@ const social = [
           margin: 0px 10px
   .social
     flex: 1
-@media (max-width: 992px)
-  .header
-    flex-wrap: wrap
-    justify-content: space-between
-    .brand
-      width: 150px
-    .toggle-btn
-      display: flex
-    .nav
-      width: 100%
-      overflow: hidden
-      transition-duration: .5s
-      display: flex
-      justify-content: center
-      align-items: center
-      height: calc(100vh - 60px)
-      .s-block
-        display: flex
-      .nav-menu
-        flex-direction: column
-        .item
-          margin: 20px
-    .nav:not(.show)
-      height: 0
-    .social
-      display: none
+// @media (max-width: 992px)
+//   .header
+//     flex-wrap: wrap
+//     justify-content: space-between
+//     .brand
+//       width: 150px
+//     .toggle-btn
+//       display: flex
+//     .nav
+//       border: solid 3px red
+//       width: calc(100vw - 90px)
+//       overflow: hidden
+//       transition-duration: .5s
+//       display: flex
+//       justify-content: center
+//       align-items: center
+//       .s-block
+//         display: flex
+//       .nav-menu
+//         flex-direction: column
+//         .item
+//           margin: 20px
+//     .nav:not(.show)
+//       height: 0
+//     .social
+//       display: none
 </style>

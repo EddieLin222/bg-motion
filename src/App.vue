@@ -15,13 +15,13 @@ import { useMainStore } from './stores/main.store';
 </script>
 
 <style lang="sass">
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&family=Poppins:wght@400;500;600;700;800&display=swap')
 html, body, #app
   width: 100%
   padding: 0
   margin: 0
-  font-family: 'Noto Sans TC', sans-serif
-
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif
+  letter-spacing: 0px
 #app
   display: flex
   flex-direction: column

@@ -17,5 +17,8 @@ export default defineConfig({
     }),
 
     loadVersion(),
-  ]
+  ],
+  server: {
+    host: "0.0.0.0"
+  }
 })

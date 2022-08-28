@@ -25,7 +25,7 @@
                     <div class="btn">BUTTON</div>
                 </div>
                 <div class="right">
-                    <img src="/image/home/banner/banner1.svg" alt="">
+                    <img :src="list.img" alt="">
                 </div>
             </swiper-slide>
         </swiper>
@@ -57,16 +57,19 @@ const dataList = ref([
     {
         title: '數位行銷，企業轉型',
         content: '網站製作著重於數據追蹤與分析，得以輔助管理者商業洞察與決策，成為企業強大的後盾。',
+        img: '/image/home/banner/banner1.svg',
         link: ''
     },
     {
         title: '依你所需，為你客製',
         content: '依照需求開發設計，能夠提升企業效率、降低繁瑣、輔助管理的資訊化系統。',
+        img: '/image/home/banner/banner2.svg',
         link: ''
     },
     {
         title: '企業形象，視覺驚艷',
         content: '展現企業品味與價值。以品牌策略提供完整的行銷與設計服務。',
+        img: '/image/home/banner/banner3.svg',
         link: ''
     }
 ])
@@ -89,19 +92,22 @@ const dataList = ref([
     .slider-block
         display: flex
         align-items: center
-        height: calc(100% - 80px)
+        height: calc(100% - 100px)
+        // border: solid 3px red
         .swiper
             --swiper-navigation-size: 30px
+            margin-top: 50px
             .swiper-slide-active
                 opacity: 1 !important
             .swiper-slide
                 display: flex
                 justify-content: center
                 align-items: center
-                padding: 0px 10%
+                padding: 0px 12%
                 gap: 60px
                 .left
                     flex: 1
+                    // border: solid 3px red
                     .title
                         font-size: 32px
                         font-weight: 700
@@ -114,14 +120,15 @@ const dataList = ref([
                         font-size: 18px
                         background-color: #415B48
                         display: inline-block
-                        padding: 3px 15px
+                        padding: 4px 15px
                         color: #fff
-                        font-weight: 900
+                        font-weight: 700
                         border-radius: 5px
                 .right
                     flex: 1
-                    img
-                        max-height: 50vh
+                    // border: solid 3px red
+                    // img
+                    //     max-height: 50vh
             :deep() .swiper-pagination
                 left: auto
                 right: 0
@@ -141,8 +148,8 @@ const dataList = ref([
     .navigation-block
         display: flex
         justify-content: flex-start
-        padding: 0px 10%
-        height: 80px
+        padding: 0px 12%
+        height: 100px
         .inner
             display: inline-flex
             align-items: center
