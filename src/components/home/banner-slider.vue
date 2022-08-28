@@ -37,14 +37,13 @@
     <div class="navigation-block">
         <div class="inner">
             <div class="prev-btn">
-                <q-icon name="chevron_left" />
+                <q-icon name="arrow_left" />
             </div>
             <div class="next-btn">
-                <q-icon name="navigate_next" />
+                <q-icon name="arrow_right" />
             </div>
         </div>
         <div class="company-info">
-            
         </div>
     </div>
 </div>
@@ -113,7 +112,7 @@ const dataList = ref([
                 display: flex
                 justify-content: center
                 align-items: center
-                padding: 0px 12%
+                padding: 0px 0px 0px 170px
                 gap: 60px
                 .left
                     flex: 1
@@ -165,7 +164,7 @@ const dataList = ref([
     .navigation-block
         display: flex
         justify-content: flex-start
-        padding: 0px 12%
+        padding: 0px 0px 0px 170px
         height: 100px
         position: relative
         .inner

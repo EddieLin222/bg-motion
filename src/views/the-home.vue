@@ -3,6 +3,7 @@
     <Banner></Banner>
     <Service :serviceData="serviceData"></Service>
     <Web :webData="webData"></Web>
+    <System :systemData="systemData"></System>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Banner from '../components/home/banner-slider.vue'
 import Service from '../components/home/service.vue'
 import Web from '../components/home/web-service.vue'
+import System from '../components/home/system-service.vue'
 import { ref } from 'vue';
 
 const serviceData = {
@@ -36,7 +38,7 @@ const serviceData = {
                 <br>友善內容管理後台，不需工程人員即可即時更新修改
                 <br><br>贈送  :  Sitemap提交 / Google Analytics / Google Tag Manager / Facebook Pixel 追蹤碼埋設`,
       img: '/image/home/service/service1.svg',
-      price: '價位 : 10000元 / 頁',
+      price: '價位 : 10,000元 / 頁',
       tag: 1
     },
     {
@@ -45,9 +47,10 @@ const serviceData = {
                 <br>專屬專案窗口，確認所有你在乎的細節
                 <br>專業網站規劃建議，使用者體驗優化
                 <br>網站版面完美呈現，打造動態效果
-                <br>客製化功能製作，滿足您的所有需求`,
+                <br>客製化功能製作，滿足您的所有需求
+                <br><br>贈送 : Sitemap提交 / Google Analytics / Google Tag Manager / Facebook Pixel 追蹤碼埋設`,
       img: '/image/home/service/service2.svg',
-      price: '價位 : 60000元以上',
+      price: '價位 : 60,000元起',
       tag: 2
     },
     {
@@ -88,6 +91,33 @@ const webData = {
     },
     {
       name: 'FB像素追蹤'
+    }
+  ]
+}
+
+const systemData = {
+  img: '/image/home/system/system-service.svg',
+  items: [
+    {
+      name: 'IoT 系統整合'
+    },
+    {
+      name: '資料庫建檔'
+    },
+    {
+      name: '資料分析'
+    },
+    {
+      name: '客製化軟體工具'
+    },
+    {
+      name: '周邊硬體整合'
+    },
+    {
+      name: '客製化功能組合鍵'
+    },
+    {
+      name: '報表輸出'
     }
   ]
 }

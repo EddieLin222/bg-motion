@@ -83,11 +83,12 @@ const props = withDefaults(defineProps<Props>(), {
     flex-direction: column
     align-items: flex-start
     justify-content: center
-    padding: 50px 12%
+    padding: 60px 100px 60px 170px
+    // padding: 50px 12%
     background-color: #F3FFF7
     height: 100vh
     .title
-        font-size: 24px
+        font-size: 28px
         font-weight: 700
         margin-bottom: 30px
     .container
@@ -107,7 +108,7 @@ const props = withDefaults(defineProps<Props>(), {
             .tags
                 margin-top: 20px
                 display: flex
-                border-bottom: solid 3px #415B48
+                border-bottom: solid 2px #415B48
                 gap: 10px
                 flex-wrap: wrap
                 margin-bottom: 20px
@@ -119,7 +120,7 @@ const props = withDefaults(defineProps<Props>(), {
                     white-space: nowrap
                     border-radius: 5px 5px 0px 0px
                     font-weight: 700
-                    border: solid 3px #415B48
+                    border: solid 2px #415B48
                     border-bottom: none
                     &:hover
                         background-color: #415B48
@@ -146,6 +147,7 @@ const props = withDefaults(defineProps<Props>(), {
                     .price
                         font-size: 24px
                         font-weight: 700
+                        color: #415B48
 .active
     background-color: #415B48
     color: #fff
