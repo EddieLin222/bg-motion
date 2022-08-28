@@ -12,8 +12,11 @@
       <div class="line bottom-line"></div>
     </div>
     <div class="nav" :class="{show: openMenu}">
-      <div class="nav-menu">
-        <QRouterLink class="item" v-for="(item, index) in navItems" :to="item.link" @click="openMenu = false">{{ item.name }}</QRouterLink>
+      <div class="nav-menu" v-for="(item, index) in navItems" :key="index">
+        <QRouterLink class="item" :to="item.link" @click="openMenu = false">
+          <div class="en">{{ item.en }}</div>
+          <div class="ch">{{ item.name }}</div>
+        </QRouterLink>
       </div>
       <div class="s-block">
         <div class="social-block">
@@ -41,18 +44,22 @@ const openMenu = ref(false)
 const navItems = [
   {
     name: '服務項目',
+    en: 'Services',
     link: '/service'
   },
   {
     name: '方案介紹',
+    en: 'Plan Introduction',
     link: '/plan'
   },
   {
     name: '關於我們',
+    en: 'About Us',
     link: '/about'
   },
   {
     name: '報價咨詢',
+    en: 'Quotation Inquiry',
     link: '/price'
   }
 ]
@@ -114,50 +121,49 @@ const social = [
       img
         width: 70px
       .motion
-        font-size: 12px
+        font-size: 14px
         font-weight: 900
         color: #fff
   .toggle-btn
-    height: 50px
-    width: 50px
+    height: 40px
+    width: 40px
     border-radius: 8px
     justify-content: space-between
     align-items: center
     flex-direction: column
     position: relative
-    border: solid 3px #fff
+    border: solid 2px #fff
     .line
-      border-top: solid 3px #fff
-      width: 70%
+      border-top: solid 2px #fff
+      width: 60%
       position: absolute
-      left: 15%
+      left: 20%
       transform-origin: center
       transition-duration: 0.5s
       opacity: 1
   .toggle-btn.show
     .top-line
-      top: 20px
+      top: 17px
       transform: rotate(45deg)
     .center-line
-      top: 25px
+      top: 17px
       opacity: 0
     .bottom-line
-      top: 20px
+      top: 17px
       transform: rotate(-45deg)
   .toggle-btn:not(.show)
     .top-line
-      top: 11px
+      top: 10px
     .center-line
-      top: 20px
+      top: 17px
     .bottom-line
-      top: 29px
+      top: 24px
 
   .nav.show
     width: calc(100vw - 90px)
   .nav
     display: flex
     height: 100vh
-    flex-direction: column
     width: 0
     position: absolute
     background-color: #000
@@ -165,18 +171,42 @@ const social = [
     top: 0
     overflow: hidden
     transition-duration: .5s
+    .nav-menu:first-child
+      width: 25%
+      overflow: hidden
+      .item
+        background-color: #FF9900
+    .nav-menu:nth-child(2)
+      width: 25%
+      overflow: hidden
+      .item
+        background-color: #7C9483
     .nav-menu
+      width: 25%
       display: flex
       color: #000
       font-weight: 700
       justify-content: center
       align-items: center
+      height: 100%
       .item
-        margin: 0px 5px 
+        flex: 1
         padding: 3px 18px
         font-size: 15px
         cursor: pointer
         color: #fff
+        text-align: center
+        white-space: nowrap
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        gap: 20px
+        .en
+          font-size: 24px
+        .ch
+          font-size: 18px
+          letter-spacing: 1px
     .s-block
       // display: flex
       flex-direction: column

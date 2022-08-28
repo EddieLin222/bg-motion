@@ -2,18 +2,20 @@
   <div class="home">
     <Banner></Banner>
     <Service :serviceData="serviceData"></Service>
+    <Web :webData="webData"></Web>
   </div>
 </template>
 
 <script setup lang="ts">
 import Banner from '../components/home/banner-slider.vue'
 import Service from '../components/home/service.vue'
+import Web from '../components/home/web-service.vue'
 import { ref } from 'vue';
 
 const serviceData = {
   tags: [
     {
-      name: 'Cool Puzzle',
+      name: '模組化網站',
       value: 1
     },
     {
@@ -27,10 +29,9 @@ const serviceData = {
   ],
   posts: [
     {
-      title: 'Cool Puzzle',
-      subtitle: '模板組合',
+      title: '模組化網站',
       content: `提供最佳的模組系統，打造專屬於你的官方網站
-                <br>網站seo優化，提供最友善於搜尋引擎的系統
+                <br>網站SEO優化，提供最友善於搜尋引擎的系統
                 <br>提供多種版型組合排列，不怕跟別人長得一樣
                 <br>友善內容管理後台，不需工程人員即可即時更新修改
                 <br><br>贈送  :  Sitemap提交 / Google Analytics / Google Tag Manager / Facebook Pixel 追蹤碼埋設`,
@@ -40,7 +41,6 @@ const serviceData = {
     },
     {
       title: '客製化網站',
-      subtitle: '',
       content: `專業客製化網站製作，完美打造您理想中的官方網站
                 <br>專屬專案窗口，確認所有你在乎的細節
                 <br>專業網站規劃建議，使用者體驗優化
@@ -52,7 +52,6 @@ const serviceData = {
     },
     {
       title: '客製化系統',
-      subtitle: '',
       content: `專屬專案窗口，確認所有你在乎的細節
                 <br>依照您的使用需求建置
                 <br>按照您的業務及管理邏輯開發，節省人力預算，實現smart work
@@ -62,6 +61,33 @@ const serviceData = {
       img: '/image/home/service/service3.svg',
       price: '價位 : 依功能報價',
       tag: 3
+    }
+  ]
+}
+
+const webData = {
+  img: '/image/home/web/web-service.svg',
+  items: [
+    {
+      name: '網站開發'
+    },
+    {
+      name: '內容管理後台'
+    },
+    {
+      name: '廣告代操'
+    },
+    {
+      name: 'GA安裝設定'
+    },
+    {
+      name: 'SSL安全憑證安裝'
+    },
+    {
+      name: '主機代管 (第一年免費)'
+    },
+    {
+      name: 'FB像素追蹤'
     }
   ]
 }

@@ -1,5 +1,6 @@
 <template>
   <div class="banner">
+    <video src="/image/home/banner/bg.mp4" autoplay muted loop></video>
     <div class="slider-block">
         <swiper
             :modules="[Navigation, Pagination, EffectFade]"
@@ -16,16 +17,19 @@
                 :key="index"
             >
                 <div class="left">
+                    <div class="brand-name">
+                        <div class="text">BackGround</div>
+                        <div class="text">Motion</div>
+                    </div>
                     <div class="title">
                         {{list.title}}
                     </div>
                     <div class="content">
                         {{list.content}}
                     </div>
-                    <div class="btn">BUTTON</div>
                 </div>
                 <div class="right">
-                    <img :src="list.img" alt="">
+                    <!-- <img :src="list.img" alt=""> -->
                 </div>
             </swiper-slide>
         </swiper>
@@ -38,6 +42,9 @@
             <div class="next-btn">
                 <q-icon name="navigate_next" />
             </div>
+        </div>
+        <div class="company-info">
+            
         </div>
     </div>
 </div>
@@ -86,9 +93,12 @@ const dataList = ref([
 
 <style scoped lang="sass">
 .banner
-    height: calc(90vh - 50px)
+    height: 100vh
     background-color: #f4f4f4
     position: relative
+    video
+        position: absolute
+        object-fit: cover
     .slider-block
         display: flex
         align-items: center
@@ -107,7 +117,20 @@ const dataList = ref([
                 gap: 60px
                 .left
                     flex: 1
+                    color: #F3FFF7
                     // border: solid 3px red
+                    .brand-name
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                        font-size: 68px
+                        font-weight: 900
+                        line-height: 60px
+                        gap: 20px
+                        margin-bottom: 60px
+                        .text
+                            display: inline-block
+                            border-bottom: solid 2px #F3FFF7
                     .title
                         font-size: 32px
                         font-weight: 700
@@ -116,14 +139,6 @@ const dataList = ref([
                         font-weight: 700
                         margin: 30px 0px
                         letter-spacing: 1px
-                    .btn
-                        font-size: 18px
-                        background-color: #415B48
-                        display: inline-block
-                        padding: 4px 15px
-                        color: #fff
-                        font-weight: 700
-                        border-radius: 5px
                 .right
                     flex: 1
                     // border: solid 3px red
@@ -136,7 +151,8 @@ const dataList = ref([
                 width: auto
                 transform: translateY(50%) rotate(90deg)
             :deep() .swiper-pagination-bullet
-                background-color: #415B48
+                // background-color: #415B48
+                background-color: #F3FFF7
                 transition-duration: .5s
                 opacity: 1
                 width: 15px
@@ -144,12 +160,14 @@ const dataList = ref([
                 margin: 0 15px
                 margin-right: 0px
             :deep() .swiper-pagination-bullet-active
-                box-shadow: 0px 0px 0px 5px rgba(65, 91, 72, .5)
+                box-shadow: 0px 0px 0px 5px rgba(243, 255, 247, .5)
+                // box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .4)
     .navigation-block
         display: flex
         justify-content: flex-start
         padding: 0px 12%
         height: 100px
+        position: relative
         .inner
             display: inline-flex
             align-items: center
@@ -167,5 +185,5 @@ const dataList = ref([
                 .q-icon
                     font-weight: 900
                     font-size: 24px
-                    color: #fff
+                    color: #F3FFF7
 </style>
