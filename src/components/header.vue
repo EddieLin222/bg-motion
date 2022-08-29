@@ -18,6 +18,21 @@
           <div class="ch">{{ item.name }}</div>
         </QRouterLink>
       </div>
+      <!-- 下面這段會報錯 所以我先註解掉了 -->
+      <!-- <div class="s-block">
+        <div class="social-block">
+          <QRouterLink class="item" to="https://www.facebook.com/misseco.tw">
+            <img src="/social/fb.svg">
+          </QRouterLink>
+          <QRouterLink class="item" to="https://www.instagram.com/misseco.tw/">
+            <img src="/social/ig.svg">
+          </QRouterLink>
+          <QRouterLink class="item" to="https://lin.ee/35kz9K7">
+            <img src="/social/line.svg">
+          </QRouterLink>
+        </div>
+        <div class="mail">misseco.tw@gmail.com</div>
+      </div> -->
     </div>
     <div class="space"></div>
   </div>
