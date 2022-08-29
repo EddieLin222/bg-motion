@@ -13,6 +13,7 @@
             <div class="time">營業時間&ensp;|&ensp;週一至週五 09:00 - 18:00</div>
             <div class="address">電話&ensp;|&ensp;04-24621082</div>
             <div class="address">地址&ensp;|&ensp;台中市西屯區西屯路三段148-19巷18號</div>
+            <div class="address">信箱&ensp;|&ensp;service@bgmotion.com.tw</div>
         </div>
         <div class="bottom">
             <div class="left">
@@ -58,10 +59,21 @@ const emit = defineEmits<{
             img
                 width: 60px
                 margin-right: 5px
+    .center
+        display: flex
+        flex-direction: column
+        gap: 3px
     .bottom
         display: flex
         justify-content: space-between
         align-items: flex-end
+@media (max-width: 1020px)
+    .footer
+        .bottom
+            align-items: flex-start
+            flex-direction: column-reverse
+            .right
+                margin-bottom: 10px
 @media (max-width: 720px)
     .footer
         padding: 40px 10%

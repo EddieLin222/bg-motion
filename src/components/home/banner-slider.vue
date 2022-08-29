@@ -201,13 +201,27 @@ const dataList = ref([
             padding: 0px 10%
 
 @media (max-width: 620px)
-.banner
-    .slider-block
-        .swiper
-            .swiper-slide
-                .left
-                    .brand-name
-                        font-size: 50px
-                        gap: 10px
+    .banner
+        .slider-block
+            .swiper
+                .swiper-slide
+                    .left
+                        .brand-name
+                            font-size: 50px
+                            gap: 10px
 
+@media (max-width: 480px)
+    .banner
+        .slider-block
+            .swiper
+                .swiper-slide
+                    .left
+                        .brand-name
+                            font-size: 40px
+                            gap: 10px
+                            line-height: 45px
+                        .title
+                            font-size: 24px
+                        .content
+                            font-size: 16px
 </style>

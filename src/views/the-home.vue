@@ -72,25 +72,32 @@ const webData = {
   img: '/image/home/web/web-service.svg',
   items: [
     {
-      name: '網站開發'
+      name: '網站開發',
+      img: '/image/home/web/web1.svg'
     },
     {
-      name: '內容管理後台'
+      name: '內容管理後台',
+      img: '/image/home/web/web2.svg'
     },
     {
-      name: '廣告代操'
+      name: 'GA安裝設定',
+      img: '/image/home/web/web3.svg'
     },
     {
-      name: 'GA安裝設定'
+      name: '廣告代操',
+      img: '/image/home/web/web4.svg'
     },
     {
-      name: 'SSL安全憑證安裝'
+      name: 'SSL安全憑證安裝',
+      img: '/image/home/web/web5.svg'
     },
     {
-      name: '主機代管 (第一年免費)'
+      name: '主機代管 (第一年免費)',
+      img: '/image/home/web/web6.svg'
     },
     {
-      name: 'FB像素追蹤'
+      name: 'FB像素追蹤',
+      img: '/image/home/web/web7.svg'
     }
   ]
 }
@@ -99,25 +106,32 @@ const systemData = {
   img: '/image/home/system/system-service.svg',
   items: [
     {
-      name: 'IoT 系統整合'
+      name: 'IoT 系統整合',
+      img: '/image/home/system/system7.svg'
     },
     {
-      name: '資料庫建檔'
+      name: '資料庫建檔',
+      img: '/image/home/system/system1.svg'
     },
     {
-      name: '資料分析'
+      name: '資料分析',
+      img: '/image/home/system/system2.svg'
     },
     {
-      name: '客製化軟體工具'
+      name: '客製化軟體工具',
+      img: '/image/home/system/system6.svg'
     },
     {
-      name: '周邊硬體整合'
+      name: '周邊硬體整合',
+      img: '/image/home/system/system4.svg'
     },
     {
-      name: '客製化功能組合鍵'
+      name: '客製化功能組合鍵',
+      img: '/image/home/system/system5.svg'
     },
     {
-      name: '報表輸出'
+      name: '報表輸出',
+      img: '/image/home/system/system3.svg'
     }
   ]
 }
