@@ -188,4 +188,26 @@ const dataList = ref([
                     font-weight: 900
                     font-size: 24px
                     color: #F3FFF7
+@media (max-width: 720px)
+    .banner
+        .slider-block
+            .swiper
+                .swiper-slide
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    padding: 0px 10%
+        .navigation-block
+            padding: 0px 10%
+
+@media (max-width: 620px)
+.banner
+    .slider-block
+        .swiper
+            .swiper-slide
+                .left
+                    .brand-name
+                        font-size: 50px
+                        gap: 10px
+
 </style>

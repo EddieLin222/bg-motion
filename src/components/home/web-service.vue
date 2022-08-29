@@ -76,5 +76,8 @@ const props = withDefaults(defineProps<Props>(), {
                     p
                         font-size: 14px
                         font-weight: 500
-
+@media (max-width: 720px)
+    .web
+        height: auto
+        padding: 60px 10%
 </style>

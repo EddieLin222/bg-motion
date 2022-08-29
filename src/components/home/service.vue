@@ -166,7 +166,17 @@ const props = withDefaults(defineProps<Props>(), {
         .container
             flex-direction: column
             .right
+                width: 100%
                 img
                     max-width: 400px
                     margin: 30px 0px
+                .tags
+                    border-bottom: none
+                    .tag
+                        border-radius: 7px 7px 0px 7px
+                        width: calc(50% - 4px)
+                        border-bottom: solid 2px #415B48
+@media (max-width: 720px)
+    .service
+        padding: 60px 10%
 </style>

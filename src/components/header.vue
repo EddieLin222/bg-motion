@@ -18,22 +18,8 @@
           <div class="ch">{{ item.name }}</div>
         </QRouterLink>
       </div>
-      <div class="s-block">
-        <div class="social-block">
-          <QRouterLink class="item" to="https://www.facebook.com/misseco.tw">
-            <img src="/social/fb.svg">
-          </QRouterLink>
-          <QRouterLink class="item" to="https://www.instagram.com/misseco.tw/">
-            <img src="/social/ig.svg">
-          </QRouterLink>
-          <QRouterLink class="item" to="https://lin.ee/35kz9K7">
-            <img src="/social/line.svg">
-          </QRouterLink>
-        </div>
-        <div class="mail">misseco.tw@gmail.com</div>
-      </div>
     </div>
-    <div class="social"></div>
+    <div class="space"></div>
   </div>
 </template>
 
@@ -217,25 +203,7 @@ const social = [
         .ch
           font-size: 18px
           letter-spacing: 1px
-    .s-block
-      // display: flex
-      flex-direction: column
-      align-items: center
-      margin-top: 50px
-      display: none
-      .mail
-        font-size: 16px
-        color: #778D7E
-      .social-block
-        display: flex
-        justify-content: center
-        margin-bottom: 10px
-        .item
-          border-radius: 30px
-          width: 30px
-          height: 30px
-          margin: 0px 10px
-  .social
+  .space
     flex: 1
 // @media (max-width: 992px)
 //   .header

@@ -62,4 +62,7 @@ const emit = defineEmits<{
         display: flex
         justify-content: space-between
         align-items: flex-end
+@media (max-width: 720px)
+    .footer
+        padding: 40px 10%
 </style>
