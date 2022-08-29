@@ -85,7 +85,7 @@ const social = [
     position: fixed
     width: 100%
     z-index: 9999
-    padding: 10px
+    padding: 12px 15px
     box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.3)
     top: 0
     .brand

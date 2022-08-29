@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <video src="/image/home/banner/bg.mp4" autoplay muted loop></video>
+    <video src="/image/home/banner/bg.mp4" autoplay muted loop playsinline></video>
     <div class="slider-block">
         <swiper
             :modules="[Navigation, Pagination, EffectFade]"
