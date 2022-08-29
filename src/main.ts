@@ -18,8 +18,12 @@ import './style/animate.sass'
 
 import './index.css'
 
+import QRouterLink from '@/components//QRouterLink.vue';
+
+
 
 createApp(App)
+  .component('QRouterLink', QRouterLink)
   .use(Quasar, {
     plugins: {},
     lang: quasarLang,
