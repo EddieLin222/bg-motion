@@ -2,7 +2,7 @@
     <div class="service">
         <div class="title">服務項目 Service.</div>
         <div class="container">
-            <div class="left">
+            <div class="left" v-if="width>=1060">
                 <Transition name="service-img">
                     <img :src="filterService[0].img" alt="">
                 </Transition>
@@ -13,6 +13,9 @@
                         {{tag.name}}
                     </div>
                 </div>
+                <Transition name="service-img" v-if="width<1060">
+                    <img :src="filterService[0].img" alt="">
+                </Transition>
                 <div class="service-container">
                     <Transition name="service">
                         <div class="service-data">
@@ -28,6 +31,9 @@
 </template>
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { useWindowSize } from '@vueuse/core'
+const { width } = useWindowSize()
+
 const selectTag = ref(1)
 const filterService = computed(()=>{
     const result = props.serviceData.posts.filter((e: { tag: number; })=>e.tag === selectTag.value)
@@ -151,4 +157,16 @@ const props = withDefaults(defineProps<Props>(), {
 .active
     background-color: #415B48
     color: #fff
+
+@media (max-width: 1060px)
+    .service
+        height: auto
+        .title
+            margin-bottom: 20px
+        .container
+            flex-direction: column
+            .right
+                img
+                    max-width: 400px
+                    margin: 30px 0px
 </style>

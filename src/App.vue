@@ -1,14 +1,17 @@
 <template>
-  <Header></Header>
+  <Header v-if="width >= 720"></Header>
+  <MoblieHeader v-else></MoblieHeader>
   <router-view />
   <Footer></Footer>
 </template>
 
 <script setup lang="ts">
 import Header from './components/header.vue'
+import MoblieHeader from './components/mobile-header.vue'
 import Footer from './components/footer.vue'
 import { ref } from 'vue';
-import { useMainStore } from './stores/main.store';
+import { useWindowSize } from '@vueuse/core'
+const { width } = useWindowSize()
 
 
 // const store = useMainStore();
