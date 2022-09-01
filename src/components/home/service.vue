@@ -1,7 +1,7 @@
 <template>
     <div class="service">
         <div class="title">服務項目 Service.</div>
-        <div class="container">
+        <div class="outer-container">
             <div class="left" v-if="width>=1060">
                 <Transition name="service-img">
                     <img :src="filterService[0].img" alt="">
@@ -76,8 +76,6 @@ const props = withDefaults(defineProps<Props>(), {
 // .posts-enter-from, .posts-leave-to
 //   opacity: 0
 
-
-
 .service-enter-active, .service-leave-active, .service-img-enter-active, .service-img-leave-active
   transition: opacity 0.5s ease
 
@@ -93,20 +91,23 @@ const props = withDefaults(defineProps<Props>(), {
     // padding: 50px 12%
     background-color: #F3FFF7
     height: 100vh
+    width: 100%
     .title
         font-size: 28px
         font-weight: 700
         margin-bottom: 60px
-    .container
+    .outer-container
         display: flex
         align-items: flex-start
         gap: 70px
         height: calc(100% - 180px)
+        width: 100%
         .left
             flex: 1
             height: 100%
             img
                 height: 100%
+                min-width: 100%
         .right
             display: flex
             flex-direction: column
