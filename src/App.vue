@@ -11,12 +11,15 @@ import MoblieHeader from './components/mobile-header.vue'
 import Footer from './components/footer.vue'
 import { ref } from 'vue';
 import { useWindowSize } from '@vueuse/core'
+import { setCssVar } from 'quasar';
 const { width } = useWindowSize()
 
 
 // const store = useMainStore();
 
 // document.title += ` v${import.meta.env.PACKAGE_VERSION}`
+setCssVar('primary', '#283A2D')
+
 </script>
 
 <style lang="sass">

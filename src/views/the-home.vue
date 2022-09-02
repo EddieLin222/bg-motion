@@ -4,14 +4,16 @@
     <Service :serviceData="serviceData"></Service>
     <Web :webData="webData"></Web>
     <System :systemData="systemData"></System>
+    <businessForm/>
   </div>
 </template>
 
 <script setup lang="ts">
-import Banner from '../components/home/banner-slider.vue'
-import Service from '../components/home/service.vue'
-import Web from '../components/home/web-service.vue'
-import System from '../components/home/system-service.vue'
+import Banner from '@/components/home/banner-slider.vue'
+import Service from '@/components/home/service.vue'
+import Web from '@/components/home/web-service.vue'
+import System from '@/components/home/system-service.vue'
+import businessForm from '@/components/home/business-form.vue'
 import { ref } from 'vue';
 
 const serviceData = {
